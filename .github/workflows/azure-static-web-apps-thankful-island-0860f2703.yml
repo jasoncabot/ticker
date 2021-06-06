@@ -21,7 +21,7 @@ jobs:
 
       - name: Set production redirect uri
         if: github.event_name == 'push'
-        run:
+        run: |
           echo "REACT_APP_CLIENT_ID=a24bf3dc-3f47-4372-8478-ad638ee21a9f" > .env
           echo "REACT_APP_REDIRECT_URI=https://ticker.jasoncabot.me/" >> .env
       
